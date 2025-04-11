@@ -9,10 +9,10 @@ Before Usage, make sure you have XUI-Subscription-Template installed.
 
 <details>
   <summary>📺 Installation Tutorial</summary>
-[![XUI Template Installation Guide](https://img.youtube.com/vi/tUMck0_khRQ/0.jpg)](https://www.youtube.com/watch?v=tUMck0_khRQ)
+  <a href="https://www.youtube.com/watch?v=tUMck0_khRQ" target="_blank">
+    <img src="https://img.youtube.com/vi/tUMck0_khRQ/0.jpg" alt="XUI Template Installation Guide">
+  </a>
 </details>
-
-
 
 ## Usage
 
