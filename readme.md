@@ -1,10 +1,16 @@
 <p align="center">
-  <a href="https://github.com/dev-ir/xui-templates-blackeyes" target="_blank" rel="noopener noreferrer" >
+  <a href="https://github.com/dev-ir/xui-templates-blackeyes" target="_blank" rel="noopener noreferrer">
     <img src="https://github.com/dev-ir/xui-templates-blackeyes/blob/master/screenshot.png" alt="SubPage screenshots" width="800" height="auto">
   </a>
 </p>
 
-# Usage
+## 📺 Installation Tutorial
+[![XUI Template Installation Guide](https://img.youtube.com/vi/tUMck0_khRQ/0.jpg)](https://www.youtube.com/watch?v=tUMck0_khRQ)
+
+## Important
+Before Usage, make sure you have XUI-Subscription-Template installed.
+
+## Usage
 
 ```bash
 sudo git clone https://github.com/dev-ir/xui-templates-blackeyes.git /opt/DVHOST/views/templates/blackeyes/
@@ -23,19 +29,21 @@ rm -rf /opt/DVHOST/views/templates/blackeyes
 ```
 nano /opt/DVHOST/dvhost.config
 ```
-# Template name 
+## Template name 
 ```
 # Replace Template name 
 TEMPLATE_NAME=blackeyes
 ```
 </details>
 
-
-Now you can restart your XUI Panel Subscription Template :
+Now you can restart your XUI Panel Subscription Template:
 ```
 systemctl restart DVHOST_TEMPLATE
 systemctl status DVHOST_TEMPLATE
 ```
+## نکته قبل استفاده
+قبل از استفاده، مطمئن شوید که XUI-Subscription-Template را نصب کرده اید.
+
 
 # استفاده
 
@@ -45,17 +53,17 @@ systemctl status DVHOST_TEMPLATE
 sudo git clone https://github.com/dev-ir/xui-templates-blackeyes.git /opt/DVHOST/views/templates/blackeyes/
 sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=blackeyes/' /opt/DVHOST/dvhost.config
 ```
+
 # حذف نسخه قبلی
 اگر نسخه قبلی دارد ابتدا حذف سپس اقدام به نصب نمایید.
 ```
 rm -rf /opt/DVHOST/views/templates/blackeyes
 ```
+
 <details>
   <summary>📝 روش جایگزین: اضافه کردن مستقیم به فایل</summary>
 
-
 سپس دستور زیر وارد کنید تا وارد تنظیمات اصلی شوید
-
 ```
 nano /opt/DVHOST/dvhost.config
 ```
@@ -72,10 +80,10 @@ TEMPLATE_NAME=blackeyes
 systemctl restart DVHOST_TEMPLATE
 systemctl status DVHOST_TEMPLATE
 ```
+
 ## 🙏 Support with Crypto 
 **We don't need financial support, only Star (⭐) is enough, thank you.**
 - USDT (TRC20): `TVUqVMoCEe5DVUoxmPg8MwmgcHvZLqLjr4`
 
 ## 📧 Join Telegram Channel
-
-TG : https://t.me/+EpErnDsDPhw3ZThk
+TG: https://t.me/+EpErnDsDPhw3ZThk
