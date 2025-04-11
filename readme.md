@@ -37,13 +37,6 @@ systemctl restart DVHOST_TEMPLATE
 systemctl status DVHOST_TEMPLATE
 ```
 
-## Languages
-
-- English
-- Persian
-- Russian
-
-
 # استفاده
 
 ابتدا فایل رو به سرور بفرستید. با دستور زیر میتونید این کارو بکنید:
