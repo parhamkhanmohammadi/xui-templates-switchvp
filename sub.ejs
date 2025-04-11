@@ -319,6 +319,7 @@
         </div>
 
         <!-- Support Section -->
+        <% if ((data.TELEGRAM_URL === true) || (data.WHATSAPP_URL === true)) { %>
         <div class="glass bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 shadow-lg fade-in">
             <h2 class="text-2xl font-semibold text-center mb-6">پشتیبانی</h2>
             <div class="grid gap-6">
@@ -339,6 +340,7 @@
                 </div>
             </div>
         </div>
+        <% } %>
     </div>
 
     <script>
@@ -386,7 +388,7 @@
                 try {
                     const successful = document.execCommand('copy');
                     if (successful) {
-                        alert('کپی شد (با روش قدیمی)');
+                        alert('کپی شد ');
                     } else {
                         throw new Error('دستور کپی ناموفق بود');
                     }
