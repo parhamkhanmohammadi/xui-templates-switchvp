@@ -125,9 +125,9 @@
         protocolMatch[1].toLowerCase() : null; if (protocol==='vmess' ) { try { const
         base64Data=link.split('://')[1].split('#')[0].split('?')[0]; const
         decodedData=JSON.parse(atob(decodeURI(base64Data))); return decodedData.ps || null; } catch (e) {
-        console.error("خطا در پردازش vmess:", e); return null; } } else { const parts=link.split('#'); if (parts.length
+        alert("خطا در پردازش vmess:", e); return null; } } else { const parts=link.split('#'); if (parts.length
         < 2) return null; let title=parts[1].split('?')[0]; try { title=decodeURIComponent(title); } catch (e) {
-        console.error(e); } title=title.replace(/[,\-–_]\s*(\d+D)?\s*(\d+H)?\s*(\d+M)?/gi, '' ).trim(); return title ||
+        alert(e); } title=title.replace(/[,\-–_]\s*(\d+D)?\s*(\d+H)?\s*(\d+M)?/gi, '' ).trim(); return title ||
         null; } } %>
 </head>
 
@@ -225,7 +225,7 @@
                             <%
                         }
                     } catch (error) {
-                        console.error("خطا در محاسبه روزهای باقیمانده:", error.message);
+                        alert("خطا در محاسبه روزهای باقیمانده:", error.message);
                         %>
                         نامشخص
                         <%
@@ -382,19 +382,19 @@
                 try {
                     const successful = document.execCommand('copy');
                     if (successful) {
-                        console.log('کپی شد (با روش قدیمی)');
+                        alert('کپی شد (با روش قدیمی)');
                     } else {
                         throw new Error('دستور کپی ناموفق بود');
                     }
                 } catch (err) {
-                    console.error('کپی نشد:', err);
+                    alert('کپی نشد:', err);
                     // نمایش متن به کاربر برای کپی دستی
                     alert('لطفاً متن زیر را کپی کنید:\n\n' + text);
                 } finally {
                     document.body.removeChild(textarea);
                 }
             } catch (err) {
-                console.error('کپی نشد:', err);
+                alert('کپی نشد:', err);
                 // نمایش متن به کاربر برای کپی دستی
                 alert('لطفاً متن زیر را کپی کنید:\n\n' + text);
             }
@@ -497,7 +497,7 @@
                     padding: 16
                 });
             } catch (error) {
-                console.error('Error generating QR code:', error);
+                alert('Error generating QR code:', error);
                 const qrcodeElement = document.getElementById('qrcode');
                 if (qrcodeElement) {
                     qrcodeElement.insertAdjacentHTML('afterend', '<p class="text-red-500 mt-2">خطا در ایجاد کد QR</p>');
