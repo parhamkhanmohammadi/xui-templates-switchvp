@@ -325,12 +325,16 @@
 
                 <div class="p-4 rounded-lg bg-gray-900/30">
                     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <a href="#" class="app-button">
+                        <% if (data.WHATSAPP_URL==true) { %>
+                        <a href="<%= data.WHATSAPP_URL %>" class="app-button">
                             ارتباط با پشتیبانی واتس اپ
                         </a>
-                        <a href="https://t.me/support" target="_blank" class="app-button">
+                        <% } %>
+                        <% if (data.TELEGRAM_URL==true) { %>
+                        <a href="<%= data.TELEGRAM_URL %>" target="_blank" class="app-button">
                             ارتباط با پشتیبانی تلگرام
                         </a>
+                        <% } %>
                     </div>
                 </div>
             </div>
