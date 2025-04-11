@@ -363,10 +363,38 @@
 
         async function copyToClipboard(text) {
             try {
-                await navigator.clipboard.writeText(text);
-                console.log('کپی شد');
+                // روش مدرن (Clipboard API)
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(text);
+                    console.log('کپی شد');
+                    return;
+                }
+                
+                // روش قدیمی (fallback)
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed'; // خارج از صفحه
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        console.log('کپی شد (با روش قدیمی)');
+                    } else {
+                        throw new Error('دستور کپی ناموفق بود');
+                    }
+                } catch (err) {
+                    console.error('کپی نشد:', err);
+                    // نمایش متن به کاربر برای کپی دستی
+                    alert('لطفاً متن زیر را کپی کنید:\n\n' + text);
+                } finally {
+                    document.body.removeChild(textarea);
+                }
             } catch (err) {
                 console.error('کپی نشد:', err);
+                // نمایش متن به کاربر برای کپی دستی
+                alert('لطفاً متن زیر را کپی کنید:\n\n' + text);
             }
         }
 
