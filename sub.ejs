@@ -319,28 +319,30 @@
         </div>
 
         <!-- Support Section -->
-        <% if ((data.TELEGRAM_URL === true) || (data.WHATSAPP_URL === true)) { %>
+    <% if (data.TELEGRAM_URL || data.WHATSAPP_URL) { %>
         <div class="glass bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 shadow-lg fade-in">
             <h2 class="text-2xl font-semibold text-center mb-6">پشتیبانی</h2>
             <div class="grid gap-6">
+            <div class="p-4 rounded-lg bg-gray-900/30">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                
+                <% if (data.WHATSAPP_URL) { %>
+                    <a href="<%= data.WHATSAPP_URL %>" class="app-button">
+                    ارتباط با پشتیبانی واتس اپ
+                    </a>
+                <% } %>
+                
+                <% if (data.TELEGRAM_URL) { %>
+                    <a href="<%= data.TELEGRAM_URL %>" target="_blank" class="app-button">
+                    ارتباط با پشتیبانی تلگرام
+                    </a>
+                <% } %>
 
-                <div class="p-4 rounded-lg bg-gray-900/30">
-                    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <% if (data.WHATSAPP_URL==true) { %>
-                        <a href="<%= data.WHATSAPP_URL %>" class="app-button">
-                            ارتباط با پشتیبانی واتس اپ
-                        </a>
-                        <% } %>
-                        <% if (data.TELEGRAM_URL==true) { %>
-                        <a href="<%= data.TELEGRAM_URL %>" target="_blank" class="app-button">
-                            ارتباط با پشتیبانی تلگرام
-                        </a>
-                        <% } %>
-                    </div>
                 </div>
             </div>
+            </div>
         </div>
-        <% } %>
+    <% } %>
     </div>
 
     <script>
