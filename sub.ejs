@@ -127,7 +127,7 @@
         decodedData=JSON.parse(atob(decodeURI(base64Data))); return decodedData.ps || null; } catch (e) {
         alert("خطا در پردازش vmess:", e); return null; } } else { const parts=link.split('#'); if (parts.length
         < 2) return null; let title=parts[1].split('?')[0]; try { title=decodeURIComponent(title); } catch (e) {
-        alert(e); } title=title.replace(/[,\-–_]\s*(\d+D)?\s*(\d+H)?\s*(\d+M)?/gi, '' ).trim(); return title ||
+        alert(e); } title=title.replace(/[,–_]\s*(\d+D)?\s*(\d+H)?\s*(\d+M)?/gi, '' ).trim(); return title ||
         null; } } %>
 </head>
 
