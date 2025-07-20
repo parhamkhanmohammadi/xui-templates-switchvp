@@ -17,14 +17,14 @@ Before Usage, make sure you have XUI-Subscription-Template installed.
 ## Usage
 
 ```bash
-sudo git clone https://github.com/dev-ir/xui-templates-blackeyes.git /opt/DVHOST/views/templates/blackeyes/
-sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=blackeyes/' /opt/DVHOST/dvhost.config
+sudo git clone https://github.com/parhamkhanmohammadi/xui-templates-switchvp.git /opt/DVHOST/views/templates/switchvp/
+sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=switchvp/' /opt/DVHOST/dvhost.config
 ```
 
 # Remove Older Version
 If you already have it installed, remove the previous version first.
 ```
-rm -rf /opt/DVHOST/views/templates/blackeyes
+rm -rf /opt/DVHOST/views/templates/switchvp
 ```
 
 <details>
@@ -36,7 +36,7 @@ nano /opt/DVHOST/dvhost.config
 ## Template name 
 ```
 # Replace Template name 
-TEMPLATE_NAME=blackeyes
+TEMPLATE_NAME=switchvp
 ```
 </details>
 
@@ -54,14 +54,14 @@ systemctl status DVHOST_TEMPLATE
 ابتدا فایل رو به سرور بفرستید. با دستور زیر میتونید این کارو بکنید:
 
 ```bash
-sudo git clone https://github.com/dev-ir/xui-templates-blackeyes.git /opt/DVHOST/views/templates/blackeyes/
-sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=blackeyes/' /opt/DVHOST/dvhost.config
+sudo git clone https://github.com/parhamkhanmohammadi/xui-templates-switchvp.git /opt/DVHOST/views/templates/switchvp/
+sudo sed -i 's/^TEMPLATE_NAME=.*/TEMPLATE_NAME=switchvp/' /opt/DVHOST/dvhost.config
 ```
 
 # حذف نسخه قبلی
 اگر نسخه قبلی دارد ابتدا حذف سپس اقدام به نصب نمایید.
 ```
-rm -rf /opt/DVHOST/views/templates/blackeyes
+rm -rf /opt/DVHOST/views/templates/switchvp
 ```
 
 <details>
@@ -75,7 +75,7 @@ nano /opt/DVHOST/dvhost.config
 حالا میبایست نام پوسته جایگزین پوسته پیشفرض کنید
 ```
 # Replace Template name 
-TEMPLATE_NAME=blackeyes
+TEMPLATE_NAME=switchvp
 ```
 </details>
 
